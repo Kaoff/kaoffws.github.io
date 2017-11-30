@@ -1,0 +1,28 @@
+@mixin slide() {
+    width: 100vw;
+    height: 100vh;
+    min-width: 400px;
+    min-height: 600px;
+}
+
+body {
+    .welcome {
+        @include slide;
+
+        .back, .overlay {
+            position: absolute;
+        }
+
+        .back {
+            @include slide;
+            filter: grayscale(100%);
+            background: url("../img/desktop.jpg") no-repeat center;
+        }
+
+        .overlay {
+            @include slide;
+            background-color: #e74c3c;
+            opacity: 0.5;
+        }
+    }
+}
