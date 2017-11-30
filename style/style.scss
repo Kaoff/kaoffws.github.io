@@ -1,28 +1,142 @@
-@mixin slide() {
+@mixin viewport() {
     width: 100vw;
     height: 100vh;
     min-width: 400px;
     min-height: 600px;
 }
 
+@mixin slide($img, $color) {
+    @include viewport;
+    @include background($img, $color);
+}
+
+@mixin background($img, $color) {
+    .back, .overlay {
+        position: absolute;
+        @include viewport;
+    }
+
+    @if str-length($img) > 0 {
+        .back {
+            filter: grayscale(100%);
+            background: url($img) no-repeat center;
+        }
+    }
+
+    .overlay {
+        background-color: $color;
+        opacity: 0.5;
+    }
+}
+
+@mixin category-btn($color) {
+    background: linear-gradient($color, $color) no-repeat left center;
+    background-size: 15px 100%;
+
+    &:hover {
+        background-size: 100% 100%;
+        text-shadow: 0 0 5px black;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     .welcome {
-        @include slide;
+        @include slide("../img/desktop.jpg", #e74c3c);
 
-        .back, .overlay {
-            position: absolute;
-        }
+        .content {
+            div {
+                display: flex;
+                padding: 20px;
+                width: 50%;
+                height: 100%;
 
-        .back {
-            @include slide;
-            filter: grayscale(100%);
-            background: url("../img/desktop.jpg") no-repeat center;
-        }
+                &:first-child {
+                    border-right: dashed 1px rgba(255, 255, 255, 0.5);
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
-        .overlay {
-            @include slide;
-            background-color: #e74c3c;
-            opacity: 0.5;
+                    img {
+                        border: 6px solid white;
+                        border-radius: 100%;
+                        width: 300px;
+                        height: 300px;
+                    }
+
+                    p {
+                        &:first-of-type {
+                            font-size: 40px;
+                            margin-bottom: 0;
+                        }
+
+                        &:last-of-type {
+                            margin-top: 0;
+                            text-align: right;
+                        }
+
+                        text-align: justify;
+                        width: 100%;
+                        font-weight: lighter;
+                        font-family: 'Barlow Semi Condensed';
+                        color: white;
+                        font-size: 24px;
+                    }
+                }
+
+                &:last-child {
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        font-family: 'Barlow Semi Condensed';
+
+                        li {
+                            cursor: pointer;
+                            transition: all 600ms ease;
+                            display: flex;
+                            align-items: center;
+                            align-self: center;
+                            color: white;
+                            font-size: 50px;
+                            height: 10%;
+                            width: 100%;
+                            list-style: none;
+                            padding-left: 25px;
+
+                            &:nth-child(1) { @include category-btn(#1abc9c) }
+                            &:nth-child(2) { @include category-btn(#9b59b6) }
+                            &:nth-child(3) { @include category-btn(#e74c3c) }
+                            &:nth-child(4) { @include category-btn(#3498db) }
+                            &:nth-child(5) { @include category-btn(#f1c40f) }
+                            
+                            i {
+                                width: 20%;
+                                padding-right: 10px;
+                                text-align: center;
+                            }
+
+                            span {
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    .content {
+        position: absolute;
+        @include viewport();
+        padding: 40px;
+        display: flex;
     }
 }
