@@ -5,25 +5,15 @@
     min-height: 600px;
 }
 
-@mixin slide($img, $color) {
+@mixin slide($color) {
     @include viewport;
-    @include background($img, $color);
+    @include background($color);
 }
 
-@mixin background($img, $color) {
-    .back, .overlay {
+@mixin background($color) {
+    .overlay {
         position: absolute;
         @include viewport;
-    }
-
-    @if str-length($img) > 0 {
-        .back {
-            filter: grayscale(100%);
-            background: url($img) no-repeat center;
-        }
-    }
-
-    .overlay {
         background-color: $color;
         opacity: 0.5;
     }
@@ -44,8 +34,23 @@
 }
 
 body {
-    .welcome {
-        @include slide("../img/desktop.jpg", #e74c3c);
+
+    display: flex;
+    flex-direction: column;
+
+    .back {
+        position: fixed;
+        @include viewport;
+        filter: grayscale(100%);
+        background: url("../img/desktop.jpg") no-repeat center;
+    }
+
+    #about {
+        @include slide(#1abc9c);
+    }
+
+    #welcome {
+        @include slide(#e74c3c);
 
         .content {
             div {
