@@ -40,6 +40,7 @@
             font-size: 40px;
             width: 100%;
             text-align: center;
+            margin-top: 0;
         }
 
         >div {
@@ -107,6 +108,7 @@ body {
         @include viewport;
         filter: grayscale(100%);
         background: url("../img/desktop.jpg") no-repeat center;
+        background-size: cover;
     }
 
     #about {

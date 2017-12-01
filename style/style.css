@@ -19,7 +19,8 @@ body {
     min-width: 400px;
     min-height: 600px;
     filter: grayscale(100%);
-    background: url("../img/desktop.jpg") no-repeat center; }
+    background: url("../img/desktop.jpg") no-repeat center;
+    background-size: cover; }
   body #about {
     width: 100vw;
     height: 100vh;
@@ -79,7 +80,8 @@ body {
       body #formation .content p:first-child {
         font-size: 40px;
         width: 100%;
-        text-align: center; }
+        text-align: center;
+        margin-top: 0; }
       body #formation .content > div {
         display: flex;
         justify-content: space-around;
@@ -128,7 +130,8 @@ body {
       body #pro .content p:first-child {
         font-size: 40px;
         width: 100%;
-        text-align: center; }
+        text-align: center;
+        margin-top: 0; }
       body #pro .content > div {
         display: flex;
         justify-content: space-around;
@@ -177,7 +180,8 @@ body {
       body #skills .content p:first-child {
         font-size: 40px;
         width: 100%;
-        text-align: center; }
+        text-align: center;
+        margin-top: 0; }
       body #skills .content > div {
         display: flex;
         justify-content: space-around;
@@ -226,7 +230,8 @@ body {
       body #hobbies .content p:first-child {
         font-size: 40px;
         width: 100%;
-        text-align: center; }
+        text-align: center;
+        margin-top: 0; }
       body #hobbies .content > div {
         display: flex;
         justify-content: space-around;
