@@ -3,7 +3,8 @@
 
 body {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow-x: hidden; }
   body .back {
     position: fixed;
     width: 100vw;
@@ -25,6 +26,58 @@ body {
       min-height: 600px;
       background-color: #1abc9c;
       opacity: 0.5; }
+  body #formation {
+    width: 100vw;
+    height: 100vh;
+    min-width: 400px;
+    min-height: 600px; }
+    body #formation .overlay {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      min-width: 400px;
+      min-height: 600px;
+      background-color: #9b59b6;
+      opacity: 0.5; }
+  body #pro {
+    width: 100vw;
+    height: 100vh;
+    min-width: 400px;
+    min-height: 600px; }
+    body #pro .overlay {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      min-width: 400px;
+      min-height: 600px;
+      background-color: #e74c3c;
+      opacity: 0.5; }
+  body #skills {
+    width: 100vw;
+    height: 100vh;
+    min-width: 400px;
+    min-height: 600px; }
+    body #skills .overlay {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      min-width: 400px;
+      min-height: 600px;
+      background-color: #3498db;
+      opacity: 0.5; }
+  body #hobbies {
+    width: 100vw;
+    height: 100vh;
+    min-width: 400px;
+    min-height: 600px; }
+    body #hobbies .overlay {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      min-width: 400px;
+      min-height: 600px;
+      background-color: #f1c40f;
+      opacity: 0.5; }
   body #welcome {
     width: 100vw;
     height: 100vh;
@@ -36,7 +89,7 @@ body {
       height: 100vh;
       min-width: 400px;
       min-height: 600px;
-      background-color: #e74c3c;
+      background-color: #34495e;
       opacity: 0.5; }
     body #welcome .content div {
       display: flex;
@@ -76,17 +129,8 @@ body {
         justify-content: center;
         font-family: 'Barlow Semi Condensed'; }
         body #welcome .content div:last-child ul li {
-          cursor: pointer;
-          transition: all 600ms ease;
-          display: flex;
-          align-items: center;
-          align-self: center;
-          color: white;
-          font-size: 50px;
-          height: 10%;
-          width: 100%;
           list-style: none;
-          padding-left: 25px; }
+          transition: all 600ms ease; }
           body #welcome .content div:last-child ul li:nth-child(1) {
             background: linear-gradient(#1abc9c, #1abc9c) no-repeat left center;
             background-size: 15px 100%; }
@@ -117,6 +161,16 @@ body {
             body #welcome .content div:last-child ul li:nth-child(5):hover {
               background-size: 100% 100%;
               text-shadow: 0 0 5px black; }
+          body #welcome .content div:last-child ul li a {
+            display: flex;
+            align-items: center;
+            align-self: center;
+            color: white;
+            font-size: 50px;
+            height: 10%;
+            width: 100%;
+            padding: 10px 0px 10px 25px;
+            text-decoration: none; }
           body #welcome .content div:last-child ul li i {
             width: 20%;
             padding-right: 10px;
