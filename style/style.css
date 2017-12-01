@@ -5,6 +5,13 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden; }
+  body p {
+    text-align: justify;
+    width: 100%;
+    font-weight: lighter;
+    font-family: 'Barlow Semi Condensed';
+    color: white;
+    font-size: 24px; }
   body .back {
     position: fixed;
     width: 100vw;
@@ -26,6 +33,31 @@ body {
       min-height: 600px;
       background-color: #1abc9c;
       opacity: 0.5; }
+    body #about .content {
+      justify-content: center; }
+      body #about .content > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        width: 33.333%;
+        height: 100%; }
+        body #about .content > div p.title {
+          font-size: 40px;
+          text-align: center; }
+        body #about .content > div .img-container {
+          display: flex;
+          border-radius: 100%;
+          border: dashed 1px white;
+          min-height: 322px;
+          width: 322px; }
+        body #about .content > div img {
+          margin: 10px;
+          height: 300px;
+          width: 300px;
+          border-radius: 100%;
+          border: solid 2px white; }
   body #formation {
     width: 100vw;
     height: 100vh;
@@ -39,6 +71,42 @@ body {
       min-height: 600px;
       background-color: #9b59b6;
       opacity: 0.5; }
+    body #formation .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      body #formation .content p:first-child {
+        font-size: 40px;
+        width: 100%;
+        text-align: center; }
+      body #formation .content > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%; }
+        body #formation .content > div div {
+          background-color: #8e44ad;
+          padding: 20px;
+          border-radius: 20px;
+          height: 500px;
+          width: 400px; }
+          body #formation .content > div div i {
+            width: 100%;
+            text-align: center;
+            font-size: 150px;
+            color: white; }
+          body #formation .content > div div p {
+            margin: 0;
+            padding: 20px 0;
+            color: white;
+            text-align: justify;
+            width: 100%; }
+            body #formation .content > div div p:first-of-type {
+              text-align: center;
+              font-size: 35px; }
+            body #formation .content > div div p:not(:last-child) {
+              border-bottom: dashed 1px white; }
   body #pro {
     width: 100vw;
     height: 100vh;
@@ -52,6 +120,42 @@ body {
       min-height: 600px;
       background-color: #e74c3c;
       opacity: 0.5; }
+    body #pro .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      body #pro .content p:first-child {
+        font-size: 40px;
+        width: 100%;
+        text-align: center; }
+      body #pro .content > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%; }
+        body #pro .content > div div {
+          background-color: #c0392b;
+          padding: 20px;
+          border-radius: 20px;
+          height: 600px;
+          width: 500px; }
+          body #pro .content > div div i {
+            width: 100%;
+            text-align: center;
+            font-size: 150px;
+            color: white; }
+          body #pro .content > div div p {
+            margin: 0;
+            padding: 20px 0;
+            color: white;
+            text-align: justify;
+            width: 100%; }
+            body #pro .content > div div p:first-of-type {
+              text-align: center;
+              font-size: 35px; }
+            body #pro .content > div div p:not(:last-child) {
+              border-bottom: dashed 1px white; }
   body #skills {
     width: 100vw;
     height: 100vh;
@@ -106,19 +210,12 @@ body {
           border-radius: 100%;
           width: 300px;
           height: 300px; }
-        body #welcome .content div:first-child p {
-          text-align: justify;
-          width: 100%;
-          font-weight: lighter;
-          font-family: 'Barlow Semi Condensed';
-          color: white;
-          font-size: 24px; }
-          body #welcome .content div:first-child p:first-of-type {
-            font-size: 40px;
-            margin-bottom: 0; }
-          body #welcome .content div:first-child p:last-of-type {
-            margin-top: 0;
-            text-align: right; }
+        body #welcome .content div:first-child p:first-of-type {
+          font-size: 40px;
+          margin-bottom: 0; }
+        body #welcome .content div:first-child p:last-of-type {
+          margin-top: 0;
+          text-align: right; }
       body #welcome .content div:last-child ul {
         margin: 0;
         padding: 0;
